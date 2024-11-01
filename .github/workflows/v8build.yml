@@ -14,8 +14,9 @@ jobs:
                 #
                 # We need xcode 12.4 or newer to cross compile between arm64/amd64
                 # https://github.com/actions/virtual-environments/blob/main/images/macos/macos-11-Readme.md#xcode
-                platform: [ubuntu-22.04, macos-11]
-                arch: [x86_64, arm64]
+                # ubuntu-22.04 x86_64
+                platform: [macos-11]
+                arch: [arm64]
         runs-on: ${{ matrix.platform }}
         steps:
             - name: Checkout
